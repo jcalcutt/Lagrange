@@ -17,12 +17,13 @@ For now though, you can expect some posts along the lines of:
 - Python-based data engineering tasks
 - Machine learning and natural language processing in Python
 - Writing batch scripts and files to schedule jobs
-- Python plotting with matplotlib, seaborn and folium
+- Python plotting with Matplotlib, Seaborn and Folium
 - Bokeh interactive visualisations
 - Storing data in a no-sql database, such as MongoDB
 - Random hacks
 
-There's no end of better places out there for tutorials etc, but I want to make some original content, not just slightly
-modify somebody else's code and pass it off as my own.
+There's no end of better places out there for tutorials etc, but I want
+to make some original content, not just slightly modify somebody else's
+code and pass it off as my own.
 
 J.

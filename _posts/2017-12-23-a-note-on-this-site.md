@@ -3,7 +3,7 @@ layout: post
 title: "A Note On This Site"
 author: "Jordan Calcutt"
 categories: journal
-tags: [html, css, jekyll, git]
+tags: [html, css, jekyll, git, blog]
 image: spools.jpg
 ---
 
@@ -63,17 +63,17 @@ jcalcutt.github.io.
 
 So, next I cloned my repository to a local directory:
 ```
-~/<site_directory>  $ git clone git@github.com:jcalcutt/jcalcutt.github.io.git
+~/site_directory $ git clone git@github.com:jcalcutt/jcalcutt.github.io.git
 ```
 I already had Ruby and RubyGems installed, so I just needed
 to install Jekyll.
 ```
 $ gem install jekyll
 ```
-With Jekyll installed, I'm able to run a local, development server at
-<i>http://localhost:4000/</i> with:
+With Jekyll installed, I'm able to run a local, jekyll development
+server at <i>http://localhost:4000/</i> with:
 ```
-~/<site_directory> $ jekyll serve
+~/site_directory $ jekyll serve
 ```
 Therefore, I'm able to test and view any changes I make to the HTML
 or preview any new posts I make before committing any changes to the
@@ -98,7 +98,7 @@ care of all the post formatting and many other features.
 Below this block I can write all the actual post content in markdown.
 Finally, it's just a case of launching a jekyll server to test if
 the markdown has been converted correctly and then commiting updates
-to the Github repo.
+to my Github repo.
 Easy!
 
 ### Links
