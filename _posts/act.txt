@@ -1,0 +1,51 @@
+
+## Intro
+All the plots/code (and a bit more) are available to view and use for yourself[here](link)
+
+
+## First steps
+The XML contains a fair bit of 'junk', so converting to a nice, clean CSv to load into a pandas dataframe is necessary but would take a bit of time.
+Since I was time constrained, I found this script ... which did all the laborious work in a few seconds.
+Now for the fun part!
+
+<initial plot>
+
+## Digging Deeper
+
+timeline plot
+one horizontal band is one day
+
+<all activity plot>
+
+## Something more quantitative
+
+So far, a lot of the analysis and insight from the data has been fairly qualitative.
+As the weekend was drawing to a close, for my final bit of insight, I wanted to look into the numbers.
+
+For this, I moved back to the 'sleep' hours per day data - which I used in the initial plot.
+Previously, I plotted every single day, distinguishing only between weekdays and weekends.
+
+
+Using the associated date, I grouped by each day of the week, taking the mean and interquartile ranges for the sleep time value.
+For the final plot I used the Seaborn library. 
+Personally, I find Seaborn more straightforward to use than Matplotlib and the end result looks a lot more visually appealing too.
+
+### Statistical view of 2017 sleep 
+<plot>
+
+So here, I'm able to see that there is significant differences with regards to the amount of sleep I get for different days of the week.
+For example, ...
+From this I can consciously try to improve my sleep patterns, such as try and even out the sleep I get on weekedays.
+
+### wrap-up
+
+So there we have it.
+Personally, I found this little project really interesting.
+Specifically because I was investigating personal data that I have unwittingly collected about myself for the last ~2.5 years.
+I'm well aware there's a lot more I could do with this.
+For now though, that will have to wait for another rainy weekend!
+
+If you found this interesting, all my code is available to see (and use) in this github repo.
+Simply clone the directory, add your activity CSV data into the data folder (having converted from XML), and run the jupyter notebook (With python 3, and any other dependencies).
+
+Let me know how you get on and I welcome any advice/improvements!
