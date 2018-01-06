@@ -91,7 +91,7 @@ plt.ylabel('Hours \'innactive\'', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 ```
 ### Innactive hours per day
-![dataframe](/assets/img/plot_1.jpg)
+![plot_1]({{ "/assets/plot_1.jpg" | absolute_url }})
 
 This is fairly interesting, but there’s not much insight that can be
 gained from this.
@@ -140,7 +140,7 @@ the mean and interquartile ranges for the sleep time value.
 
 ### Statistical view of 2017 sleep
 
-![dataframe](/assets/img/plot_3.jpg)
+![plot_3]({{ "/assets/plot_3.jpg" | absolute_url }})
 
 I won't go into too much detail with the analysis, but what's initially
 evident from this is there are some very clear differences between day
