@@ -26,7 +26,7 @@ could be exported from the app as an XML file.
 The XML contains a fair bit of 'junk', so converting to a nice, clean
 CSV - in order to to load into a pandas dataframe - was necessary.
 Since I was time constrained, I found [this pre-made applehealthdata.py script](https://github.com/tdda/applehealthdata)
-which did all the laborious work in a few seconds.
+which does all the laborious work in a few seconds.
 NICE!
 
 <i>Running this in the same location as the health data export.xml file:</i>
@@ -34,9 +34,11 @@ NICE!
 $ python healthdata.py export.xml
 ```
 
-Essentially, this raw data is collected as ‘startDate’ and ‘finishDate’
+Essentially, this raw data is collected as ‘startDate’ and ‘endDate’
 <i>datetime</i> columns, and the number of steps taken between these times,
 a ‘value’ column.
+
+![table]({{ "/assets/table.jpg" | absolute_url }})
 
 Since my phone is in my pocket shortly before I go to bed and not too
 long after I get up in the morning, I figured that I could work out a
@@ -90,7 +92,7 @@ plt.xlabel('Time (days)', size=20)
 plt.ylabel('Hours \'innactive\'', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 ```
-### Innactive hours per day
+### 'Sleep' per day
 ![plot_1]({{ "/assets/plot_1.jpg" | absolute_url }})
 
 This is fairly interesting, but there’s not much insight that can be
@@ -109,15 +111,63 @@ I'd seen [this high scoring post of daily activity on r/dataisbeautiful](https:/
 and wanted to use this as inspiration to create my own version in Python,
 with my own data.
 
+Since the data doesn't take into account daylight saving I needed to make
+the dateime value 'aware' of the timezone in which it was recorded,
+thus all data should be consistent throughout the year:
+```
+tz = timezone("Europe/London")
+
+df2['start'] = df2['start'].apply(lambda x : x.tz_localize(UTC).tz_convert(tz))
+df2['end'] = df2['end'].apply(lambda x : x.tz_localize(UTC).tz_convert(tz))
+```
+
+Also, I needed to calculate the time difference between the activity
+'start' and 'end' time for all values and convert this value
+to a float in order to plot:
+```
+df2['act'] = df2.end - df2.start
+
+df2['hours'] = df2['act'] / np.timedelta64(3600, 's')
+```
+
 So, just a quick note, before explaining the results.
 I consider this to be fairly sensitive information about myself, so I
-have not included axis values on the plots.
+have not included detailed axis values on the plots.
 At least you can get a good idea of what is capable from the data
 though.
 
-PLOT
+### 2017 Timeline Plot
 
-ANALYSIS
+![plot_1]({{ "/assets/plot_2.jpg" | absolute_url }})
+
+Each small horizontal blue line (for weekdays, and orange for weekends)
+represents 'activity' for a given period of time.
+The longer the line, the longer the period of activity.
+One day is represented by the distance from the far left of the plot to
+the corresponding side on the far right.
+As I said previously I haven’t included all time labels for privacy,
+but at least this gives a good example.
+
+Most people have a daily routine that revolves around work and the same
+can be seen in my case.
+The top three quarters of the plot, from March onwards, shows the period
+of time where I started my current position as a data engineer.
+There are three clear bands which represent me commuting to work, walking
+during my lunch break and then commuting back from work.
+The only clear breaks from this routine can be seen at the end of July
+and in mid-August when I had some holidays.
+
+The bottom section (before March) represents my time after returning to
+the UK and starting a job with not much to speak of in the way of a
+routine.
+The job was fairly active though, which is evident with the longer
+smearings of blue.
+
+In general, weekends show a lot more sporadic activity, with no clear
+activity bands.
+Also, they contain much longer lines which can most likely be attributed
+to my weekend bike rides.
+
 
 ## Something More Quantitative
 
@@ -130,15 +180,35 @@ For this, I moved back to the 'sleep' hours per day data - which I used
 in the initial plot.
 Previously, I plotted every single day, distinguishing only between
 weekdays and weekends.
+Here I wanted to find out how different days of week affected the amount
+of sleep I had.
+
+Using the associated date, I assigned a number to each day of the week:
+```
+sleep['day'] = sleep['date'].dt.dayofweek
+```
+
+From which, I was able to 'group-by' this value over the entire time
+range - obtaining statistics such as the mean, min, max and standard
+deviation of 'sleep time'.
+
+
+
+Day of Week | Mean Sleep Time (hrs)| Standard Deviation |25 Percentile Mean (hrs)|75 Percentile Mean (hrs)
+--- | --- | ---
+Monday | 9.35 |	1.56 |	8.23 |	10.09
+Tuesday |	8.85|	1.67 |	7.81 |	9.54
+Wednesday |	8.92 |	1.46 |	7.99 |	9.69
+Thursday |	9.19 |	1.44 |	8.29 |	9.98
+Friday	|9.45 |	1.99 |	8.16 |	10.76
+Saturday |	9.75 |	2.21 |	8.22 |	10.69
+Sunday	|	9.92 |	1.77 |	8.70 |	10.93
 
 For the final plot I used the Seaborn library.
 Personally, I find Seaborn more straightforward to use than Matplotlib
-and the end result looks a lot more visually appealing too.
-Using the associated date, I grouped by each day of the week, taking
-the mean and interquartile ranges for the sleep time value.
+and the end result looks a lot more visually appealing too...
 
-
-### Statistical view of 2017 sleep
+### Statistical view of 'Innactive hours' (all data)
 
 ![plot_3]({{ "/assets/plot_3.jpg" | absolute_url }})
 
@@ -147,7 +217,7 @@ evident from this is there are some very clear differences between day
 (or night) of the week and number of 'innactive' hours.
 Suprisingly, I have (roughly) an hour less sleep on Tuesday nights
 compared to Friday nights on average.
-Saturday has the largest spread of the interquartile range, suggesting
+Friday also has the largest spread of the interquartile range, suggesting
 less 'routine' sleeping patterns.
 From this I can consciously try to improve my sleep patterns, such as
 trying to even out the sleep I get on weekdays.

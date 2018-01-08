@@ -5,12 +5,15 @@ title: About
 
 I'm going to use this bit of space to write about my side-projects.
 
-I tend to do a fair bit of programming/ 'other nerdy stuff' outside of work, so I'll use this space mostly to keep
-track of my own mini side-projects.
+I tend to do a fair bit of programming/ 'other nerdy stuff' outside of
+work, so I'll use this space mostly to keep track of my own mini
+side-projects.
 
-I have a fair bit of content half-finished outside of github and plenty of other ideas, so it'll only be a matter of
-time before I add more material. When I get this properly up-and-running I'll aim to add new stuff fairly regularly. I
-think one new post every month or two is a good target to aim for.
+I have a fair bit of content half-finished outside of github and plenty
+of other ideas, so it'll only be a matter of time before I add more
+material.
+When I get this properly up-and-running I'll aim to add new stuff fairly
+regularly.
 
 For now though, you can expect some posts along the lines of:
 

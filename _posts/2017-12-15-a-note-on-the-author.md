@@ -28,7 +28,7 @@ the biggest problems in; Science, Business, and everything in between.
 
 For me, learning programming is a continuous process.
 It's frustrating and challenging sometimes, but incredibly rewarding
-when I make it out the other side.
+when the problem has been succesfully solved.
 I think this quote [(from here)](https://hackernoon.com/an-open-letter-to-less-experienced-developers-c33c16ea5e88)
 sums it up pretty well:
 
