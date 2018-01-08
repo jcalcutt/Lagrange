@@ -3,7 +3,7 @@ layout: post
 title: "A Note On This Site"
 author: "Jordan Calcutt"
 categories: journal
-tags: [html, css, jekyll, git, blog]
+tags: [html, css, jekyll, git, meta, blog]
 image: spools.jpg
 ---
 
