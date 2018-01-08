@@ -3,6 +3,8 @@ layout: page
 title: About
 ---
 
+<b><i>Hi! I'm Jordan and I enjoy solving problems.</i></b>
+
 I'm going to use this bit of space to write about my side-projects.
 
 I tend to do a fair bit of programming/ 'other nerdy stuff' outside of
@@ -28,5 +30,8 @@ For now though, you can expect some posts along the lines of:
 There's no end of better places out there for tutorials etc, but I want
 to make some original content, not just slightly modify somebody else's
 code and pass it off as my own.
+
+The opinions expressed here are my own and do not reflect on my
+employer.
 
 J.

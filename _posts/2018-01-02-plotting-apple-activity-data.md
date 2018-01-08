@@ -24,7 +24,7 @@ myself a challenge to try and make sense of this data.
 After a brief internet search I soon found out that all this raw data
 could be exported from the app as an XML file.
 The XML contains a fair bit of 'junk', so converting to a nice, clean
-CSV - in order to to load into a pandas dataframe - was necessary.
+CSV - in order to load into a pandas dataframe - was necessary.
 Since I was time constrained, I found [this pre-made applehealthdata.py script](https://github.com/tdda/applehealthdata)
 which does all the laborious work in a few seconds.
 NICE!
@@ -46,19 +46,20 @@ long after I get up in the morning, I figured that I could work out a
 This would be based on the last value from the previous day and the
 first value from the current day.
 Of course, this would not be completely precise but would at least give
-a fair indication, at least when comparing internally.
-So, next I made some code that would find the last value for day
+a fair indication, at least as a precursor.
+
+So, next I wrote some code that would find the last value for day
 <i>i</i> and the first value for day <i>i+1</i> and subtract the two
 datetime values, giving a time delta object - essentially a time in
 hours which represented a rough indication of my sleep time.
 ```
-begin = new.date[1]
+begin = new.date[0]  # first date in the data as reference point
 i=0
 sleep = DataFrame([])
 total_days = new.groupby('date')['date'].nunique().sum()   # The total number of days in this data
 
 while i < total_days:
-
+    # first value for day i+1 minus the last value for day i and append to a dataframe
     calc = Series([new.loc[new['date'] == begin+timedelta(i+1)].start.min() - new.loc[new['date'] == begin+timedelta(i)].end.max()])
     sleep = sleep.append(calc, ignore_index = True)
 
@@ -95,8 +96,8 @@ plt.tick_params(axis='both', which='major', labelsize=15)
 ### 'Sleep' per day
 ![plot_1]({{ "/assets/plot_1.jpg" | absolute_url }})
 
-This is fairly interesting, but there’s not much insight that can be
-gained from this.
+This is fairly interesting, but there’s not much concrete
+insight that can be gained from this.
 However, it's clear there are some patterns hidden in here, so I decided
 it's definitely worth digging a little deeper.
 
@@ -116,6 +117,7 @@ the dateime value 'aware' of the timezone in which it was recorded,
 thus all data should be consistent throughout the year:
 ```
 tz = timezone("Europe/London")
+UTC = pytz.utc
 
 df2['start'] = df2['start'].apply(lambda x : x.tz_localize(UTC).tz_convert(tz))
 df2['end'] = df2['end'].apply(lambda x : x.tz_localize(UTC).tz_convert(tz))
@@ -136,17 +138,16 @@ have not included detailed axis values on the plots.
 At least you can get a good idea of what is capable from the data
 though.
 
-### 2017 Timeline Plot
-
-![plot_1]({{ "/assets/plot_2.jpg" | absolute_url }})
-
 Each small horizontal blue line (for weekdays, and orange for weekends)
 represents 'activity' for a given period of time.
 The longer the line, the longer the period of activity.
 One day is represented by the distance from the far left of the plot to
 the corresponding side on the far right.
-As I said previously I haven’t included all time labels for privacy,
-but at least this gives a good example.
+
+### 2017 Timeline Plot
+
+![plot_1]({{ "/assets/plot_2.jpg" | absolute_url }})
+
 
 Most people have a daily routine that revolves around work and the same
 can be seen in my case.
@@ -166,7 +167,7 @@ smearings of blue.
 In general, weekends show a lot more sporadic activity, with no clear
 activity bands.
 Also, they contain much longer lines which can most likely be attributed
-to my weekend bike rides.
+to bike rides or long walks.
 
 
 ## Something More Quantitative
