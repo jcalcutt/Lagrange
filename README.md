@@ -1,10 +1,13 @@
 
+## Welcome to my github pages site
 
-## Credits
+I tend to do a fair bit of programming/ 'other nerdy stuff' outside of
+work, so I'll use this space mostly to keep track of my own mini
+side-projects.
 
-### Creator
+View the site here: [jcalcutt.github.io](jcalcutt.github.io)
 
-#### Paul Le
 
-* [www.lenpaul.com](http://lenpaul.com)
+Credits:
 
+Forked from [LeNPaul](https://github.com/LeNPaul/Lagrange)
