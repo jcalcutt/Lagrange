@@ -50,7 +50,7 @@ to my Github account
 'USERNAME.github.io' ...<i>more info on naming conventions [here](https://help.github.com/articles/user-organization-and-project-pages/)
 - Edit the _config.yml (and _data/settings.yml) files as necessary
 - In Github settings, ensured Github pages is being served from the
-correct branch - 'gh-pages' in my case.
+correct branch - 'origin/master' in my case.
 
 Now, in theory, the site is all ready to go.
 I could just make changes to
@@ -77,7 +77,7 @@ server at <i>http://localhost:4000/</i> with:
 ```
 Therefore, I'm able to test and view any changes I make to the HTML
 or preview any new posts I make before committing any changes to the
-'gh-pages' branch in the website repo.
+'origin/master' branch in the website repo.
 
 The only thing to do now is to add new content to the '_posts'
 directory in the form of markdown files. At the top of each .md file I
@@ -97,7 +97,7 @@ This essentially interacts with all my pre-configured settings, taking
 care of all the post formatting and many other features.
 Below this block I can write all the actual post content in markdown.
 Finally, it's just a case of launching a jekyll server to test if
-the markdown has been converted correctly and then commiting updates
+the markdown has been converted correctly and then committing updates
 to my Github repo.
 Easy!
 
