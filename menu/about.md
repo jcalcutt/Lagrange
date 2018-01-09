@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<b><i>Hi! I'm Jordan and I enjoy solving problems.</i></b>
+<b><i>Hi!</i></b>
 
 I tend to do a fair bit of programming/ 'other nerdy stuff' outside of
 work, so I'll use this space mostly to keep track of my own mini
