@@ -7,7 +7,7 @@ tags: [python, pandas, matplotlib, blog]
 image: boxplot.jpg
 ---
 <b>
-Hidden away in a rarely opened folder on my IPhone is the 'health' app.
+Hidden away in a rarely opened folder on my iPhone is the 'health' app.
 I've known for a little while that it has an activity tracking
 capability (essentially a pedometer), but it's not something I've
 thought twice about until fairly recently.
@@ -40,7 +40,7 @@ a ‘value’ column.
 
 ![table]({{ "/assets/table.jpg" | absolute_url }})
 
-Since my phone is in my pocket shortly before I go to bed and not too
+Since my phone is in my pocket both; shortly before I go to bed and not too
 long after I get up in the morning, I figured that I could work out a
 ‘sleep’ duration.
 This would be based on the last value from the previous day and the
