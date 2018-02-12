@@ -233,7 +233,7 @@ I'm well aware there's a lot more I could do with this.
 For now though, that will have to wait for another rainy weekend!
 
 If you found this interesting, all my code can be found
-[in this github repo](https://github.com/jcalcutt/iphone_activity_data).
+[in this github repo](https://github.com/jcalcutt/projects/tree/master/iphone_activity_data).
 Simply clone the directory, add your activity CSV data into the data
 folder (having converted from XML), and run the jupyter notebook (with
 python 3, and any other dependencies stated in the notebook).
@@ -242,4 +242,4 @@ Let me know how you get on and I welcome any advice/improvements!
 
 ### Links
 
-[https://github.com/jcalcutt/projects/iphone_activity_data](https://github.com/jcalcutt/projects/iphone_activity_data)
+[https://github.com/jcalcutt/projects/iphone_activity_data](https://github.com/jcalcutt/projects/tree/master/iphone_activity_data)
