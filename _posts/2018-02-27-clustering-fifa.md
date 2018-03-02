@@ -34,19 +34,16 @@ More importantly, for this purpose, it contains all the physical and
 skill attributes; Sprint Speed, Free Kick Accuracy, Heading Accuracy etc.
 Also, ratings for each playing position are included - e.g. CAM, RB, GK etc.
 
-There are numerous ways I could go about the K-means clustering, but I
-settled on the idea of comparing players from the team I support,
+There are numerous ways I could go about the K-means clustering, but for
+this, I settled on the idea of comparing players from the team I support -
 Newcastle United [insert pun here], against those from Manchester United.
 I want to compare the playing styles of the individual players, not
 based on their ability, so I will need to weight their stats for their
 respective teams.
 Before I can get to the stage of employing the K-means clustering, I
-need to clean and pre-process the data.
+need to first clean and then pre-process the data.
 
-Filtering the players to a new dataframe from just these two clubs:
-```
-dfnm = df[(df.Club == 'Newcastle United') | (df.Club == 'Manchester United')]
-```
+Fortunately, in this case there was only minimal cleaning required:
 
 On closer inspection of the data, several of the columns were strings,
 whereas they needed to be integers.
@@ -56,6 +53,12 @@ for col in fix_cols:  # fix_cols is a list of all numeric columns
 
     df[col] = df[col].apply(lambda x : eval(str(x)))
 ```
+
+Filtering the players to a new dataframe from just these two clubs:
+```
+dfnm = df[(df.Club == 'Newcastle United') | (df.Club == 'Manchester United')]
+```
+
 
 ### Pre-processing and PCA
 
@@ -75,7 +78,7 @@ dfnm = dfnm.groupby('Club').transform(lambda x: (x - x.mean()) / x.std())
 
 Now reducing the 60+ numeric dimensions, to two with PCS:
 ```
-x = dfnm2.values # returns a numpy array
+x = dfnm.values # returns a numpy array
 min_max_scaler = preprocessing.MinMaxScaler()  # sklearn scaler
 x_scaled = min_max_scaler.fit_transform(x)  # fit scaler
 X_norm = pd.DataFrame(x_scaled)
@@ -107,7 +110,7 @@ of the data helps with this too.
 ![elbow]({{ "/assets/elbow.png" | absolute_url }})
 
 For this dataset - after a few trial-runs and from the aforementioned
-‘elbow method’ - 5 clusters are a suitable fit.
+‘elbow method’ - 5 clusters seem to be the most suitable fit.
 Employing the K-means clustering is relatively straightforward - a lot
 of the hard work has already been done in pre-processing the data.
 ```
