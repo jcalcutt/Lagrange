@@ -3,33 +3,20 @@ layout: page
 title: About
 ---
 
-<b><i>Hi!</i></b>
+Hi! I’m Jordan
 
-I tend to do a fair bit of programming/ 'other nerdy stuff' outside of
-work, so I'll use this space mostly to keep track of my own mini
-side-projects.
+This is the place where I’ll write up my thoughts and answers to
+(random) ideas and questions I think up.
+Most of the content will be based upon the code I write - trying to
+find a happy medium between technical detail and readability - whilst
+also telling a story of something (hopefully) fairly meaningful.
 
-I have a fair bit of content half-finished outside of github and plenty
-of other ideas, so it'll only be a matter of time before I add more
-material.
-When I get this properly up-and-running I'll aim to add new stuff fairly
-regularly.
-
-For now though, you can expect some posts along the lines of:
-
-- Python-based data engineering tasks
-- Machine learning and natural language processing in Python
-- Writing batch scripts and files to schedule jobs
-- Python plotting with Matplotlib, Seaborn and Folium
-- Bokeh interactive visualisations
-- Storing data in a no-sql database, such as MongoDB
-- Random hacks
-
-There's no end of better places out there for tutorials etc, but I want
-to make some original content, not just slightly modify somebody else's
-code and pass it off as my own.
+I’m currently working as a data engineer - developing solutions to
+business problems - using a wide range of open (and some closed) source
+tools.
+When I’m not sat behind a computer I can usually be found outside on my
+bike.
 
 Any opinions I may express here are entirely my own and do not reflect
 on my employer.
 
-J.
