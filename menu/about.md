@@ -5,9 +5,9 @@ title: About
 
 Hi! I’m Jordan
 
-This is the place where I’ll write up my: thoughts, ideas and answers to
+This is the place where I’ll post my: thoughts, ideas and answers to
 (random) questions I think up.
-Most of the content will be based upon the code I write - trying to
+Most of the content will be focused around the code I write - trying to
 find a happy medium between technical detail and readability - whilst
 also telling a story of something (hopefully) fairly meaningful.
 
