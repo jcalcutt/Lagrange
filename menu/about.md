@@ -11,7 +11,7 @@ Most of the content will be focused around the code I write - trying to
 find a happy medium between technical detail and readability - whilst
 also telling a story of something (hopefully) fairly meaningful.
 
-I’m currently working as a data engineer - developing solutions to
+I’m a data engineer - developing solutions to
 business problems - using a wide range of open (and some closed) source
 tools.
 When I’m not sat behind a computer I can usually be found outside on my
