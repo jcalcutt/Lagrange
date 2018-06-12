@@ -5,7 +5,7 @@ title: About
 
 Hi! I’m Jordan
 
-This is the place where I’ll post my: thoughts, ideas and answers to
+This is the place where I’ll post my: thoughts, ideas, and answers to
 (random) questions I think up.
 Most of the content will be focused around the code I write - trying to
 find a happy medium between technical detail and readability - whilst
@@ -17,6 +17,6 @@ I enjoy learning and finding insight that's not immediately obvious.
 When I’m not sat behind a computer I can usually be found outside on my
 bike.
 
-Any opinions I may express here are entirely my own and do not reflect
-on my employer.
+_Any opinions I may express here are entirely my own and do not reflect
+on my employer._
 
