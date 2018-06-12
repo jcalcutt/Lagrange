@@ -159,7 +159,7 @@ Although, it can used for bragging rights…
 ### Emojis
 
 Emojis are everywhere.
-Since being included in Apples’ 2011 IOS5 operating system they have
+Since being included in Apple's 2011 IOS5 operating system they have
 proliferated our messages and have been likened to a language in
 themselves.
 You only have to Google something along the lines of ‘Emojis as a
@@ -258,9 +258,9 @@ total message count.
 It's quite interesting to see clear differences in message density between
 days of the week.
 Monday, Tuesday, and Wednesday follow a similar pattern with a lot of
-messages sent in the evening, whereas Thursday,
-Friday, and Saturday have less messages sent on the whole, and are
-spread more evenly with peaks in the afternoon.
+messages sent in the evening.
+Whereas Thursday, Friday, and Saturday have less messages sent on the
+whole, are spread more evenly, and with peaks in the afternoon.
 
 
 ## Summary
@@ -269,11 +269,12 @@ Hopefully I’ve demonstrated some of the insight that can be leveraged
 from textual data with NLTK.
 As the data itself was my own, the various pieces of insight were hugely
 interesting for me.
-To this end, all my commented code is available to view [here on Github](https://github.com/jcalcutt/projects/tree/master/nlp_whatsapp),
+To this end, all my commented code is available to view [here on GitHub](https://github.com/jcalcutt/projects/tree/master/nlp_whatsapp),
 so you can run this with your own WhatsApp data and potentially build
 some more insight into this.
 There's also some various other bits I haven't written up here, such as
 POS tagging and creating wordclouds.
+
 At a time of heightened public awareness about data
 privacy, I think one of the more empowering things you can do is try and
 gain insight from your own data. ✌️
@@ -281,7 +282,7 @@ gain insight from your own data. ✌️
 
 ### Links
 
-[My NLP WhatsApp Github repo](https://github.com/jcalcutt/projects/tree/master/nlp_whatsapp)
+[My NLP WhatsApp GitHub repo](https://github.com/jcalcutt/projects/tree/master/nlp_whatsapp)
 
 [NLTK Book](https://www.nltk.org/book/)
 
