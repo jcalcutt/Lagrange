@@ -11,7 +11,7 @@ I’ve used the Natural Language Processing (NLP) powers of the NLTK
 Python library in the past.
 However, I feel like I’ve only brushed the surface of it’s capabilities
 \- so, my goal here was to delve a bit deeper, and try to extract some
-interesting insight from some of my own textual, WhatsApp data with the
+interesting insight from some of my own textual WhatsApp data with the
 NLTK library.
 </b>
 
