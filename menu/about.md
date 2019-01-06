@@ -3,19 +3,15 @@ layout: page
 title: About
 ---
 
-Hi! I’m Jordan
+Hi!
 
-This is the place where I’ll post my: thoughts, ideas, and answers to
-(random) questions I think up.
-Most of the content will be focused around the code I write - trying to
-find a happy medium between technical detail and readability - whilst
-also telling a story of something (hopefully) fairly meaningful.
+This is the place I post some of my thoughts and ideas. Most of the content is  focused around code, but I’m always trying to find a happy medium between technical detail and readability. Hopefully, you’ll find some stuff here interesting and/or fairly meaningful.
 
-I’m a Data Engineer - developing solutions to business problems - using
-a wide range of open (and some closed) source tools.
-I enjoy learning and finding insight that's not immediately obvious.
-When I’m not sat behind a computer I can usually be found outside on my
-bike.
+I enjoy learning and finding insight that’s not immediately obvious. When I’m not sat behind a computer I can usually be found outside on my bike.
+
+
+Jordan
+
 
 _Any opinions I may express here are entirely my own and do not reflect
 on my employer._
