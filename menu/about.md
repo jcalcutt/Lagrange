@@ -14,5 +14,5 @@ Jordan
 
 
 _Any opinions I may express here are entirely my own and do not reflect
-on my employer._
+on my past or present employer(s)._
 
