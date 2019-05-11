@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bike Racing - With A Little Help From Python
+title: Bike Racing, Tactics, and Python
 author: "Jordan Calcutt"
 categories: journal
 tags: [python, pandas, blog]
@@ -13,13 +13,15 @@ like: 70% fitness, 20% tactics and 10% luck.
 </b>
 
 I’ve been racing bikes for a few years now.
-I enjoy the adrenaline of riding fast, the social aspect of it, and the
-feeling when hours of hard work training pays off with a decent result.
+I enjoy a lot of things about racing and riding, but the things that
+stand out for me are: the adrenaline of riding fast, the social aspect
+of it, and the feeling when the hours of hard work training pays off
+with a decent result.
 Living in London, there’s a great scene of midweek evening criteriums*
-and also a good selection of longer, road races* at the weekends,
+and also a good selection of longer road races* at the weekends,
 usually a short drive or train ride away.
-As a pretty competitive person, I always want to push myself further, go
-bit faster and get better results.
+As a pretty competitive person, I always want to push my limits further -
+go a bit faster and get better results.
 
 Like most of the guys I race against, I have a full-time job and other
 commitments which, ultimately, doesn’t leave an awful lot of time to
@@ -45,9 +47,9 @@ out for the win, or spending your energy unnecessarily early on in the
 race and not having enough left in the tank to be competitive towards
 the end.
 It usually comes down to fine margins, and having a little bit more
-power left than the other guys, or arriving at the line with less people
-in the group, makes a huge difference to your chances of getting on the
-podium or finishing mid-bunch.
+power left than the other guys, or arriving at the finish line with less
+people in the group, makes a huge difference to your chances of getting
+on the podium or finishing mid-bunch.
 
 So, now getting onto the point of this post.
 British Cycling (BC) has a fairly useful website, which riders can use
@@ -88,8 +90,8 @@ href attribute for each entrant to navigate to their ‘points’ (or
 results page).
 
 Looping through the entrants list I created a Python 3.7+ ‘rider’
-dataclass, assigning: the entrant name, club, and reading their points
-table - as a pandas DataFrame - as attributes.
+<i>dataclass</i>, assigning: the entrant name, club, and reading their
+points table - as a pandas DataFrame - as attributes.
 These ‘rider’ data classes I could then assign to a ‘field’ dataclass,
 which is a list of the ‘rider’ dataclasses.
 Cool, so thats all the scraping out the way.
@@ -167,7 +169,6 @@ As to whether this helps out with the 20% tactics part of race success
 
 <br/>
 <br/>
-<br/>
 
 ***
 
@@ -183,8 +184,9 @@ hese races are short and intense, with average speeds of usually 40kph+
 and escort motorbikes create a rolling road block.
 These are usually anywhere between 80-150km in length, taking place on
 ‘normal’ roads, consisting of laps of a circuit 10-20km in length.
-</i>
+
 
 ### Links
 
 [Domestique Github repo](https://github.com/jcalcutt/domestique)
+[Python 3.7 Dataclasses](https://docs.python.org/3/library/dataclasses.html)
