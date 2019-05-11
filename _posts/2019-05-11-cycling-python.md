@@ -173,7 +173,7 @@ As to whether this helps out with the 20% tactics part of race success
 ***
 
 <i>
-### <u><i>Bike Lingo</i></u>
+#### <u><i>Racing Lingo</i></u>
 
 <b>Criterium</b> - A short (usually hour-ish long) race on an outdoor
 circuit. The circuit can be anywhere between 1-3km in length, and the
@@ -189,4 +189,5 @@ These are usually anywhere between 80-150km in length, taking place on
 ### Links
 
 [Domestique Github repo](https://github.com/jcalcutt/domestique)
+
 [Python 3.7 Dataclasses](https://docs.python.org/3/library/dataclasses.html)
