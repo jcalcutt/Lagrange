@@ -13,7 +13,7 @@ like: 70% fitness, 20% tactics and 10% luck.
 </b>
 
 I’ve been racing bikes for a few years now.
-I enjoy a lot of things about racing and riding, but the things that
+There's a lot to enjoy about racing and riding, but the things that
 stand out for me are: the adrenaline of riding fast, the social aspect
 of it, and the feeling when the hours of hard work training pays off
 with a decent result.
