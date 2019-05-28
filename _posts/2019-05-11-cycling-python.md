@@ -26,7 +26,7 @@ go a bit faster and get better results.
 Like most of the guys I race against, I have a full-time job and other
 commitments which, ultimately, doesn’t leave an awful lot of time to
 train.
-On a good week, I can maybe get out on the bike for 10 hours, but on a
+On a good week, I can get out on the bike for maybe 10 hours, but on a
 busy week, sometimes I can <i>only</i> manage around 4.
 What I’m getting at here is - I’m never going to be able to
 significantly increase my fitness by ramping up my training
@@ -153,12 +153,12 @@ instead. My output is essentially something like this:
 <b> Name</b> | <b>Club</b>	| <b>Total Points</b>	| <b>Wins</b> |<b>Points per race</b> |<b>Top 10 Count</b>
 Joe Bloggs | JB CC | 25 | 1 | 4.3 | 4
 John Smith | Another CC  | 12 | 0 | 2.4 | 2
-A Nother | Team CC  | 5 | 0 | 21.2 | 1
+A Nother | Team CC  | 5 | 0 | 1.2 | 1
 
 
 #### <i>The Final Sprint</i>
 
-If I get more time, I could deploy this as web-app, with a neater
+If I get more time, I could deploy this as a web-app, with a neater
 interface, but for now it does what I need it to do.
 The summary stats created by the program give a quick and easy overview
 of the other riders, saving a lot of time if I were to try and do some
