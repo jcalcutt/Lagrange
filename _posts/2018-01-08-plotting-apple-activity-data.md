@@ -52,7 +52,7 @@ So, next I wrote some code that would find the last value for day
 <i>i</i> and the first value for day <i>i+1</i> and subtract the two
 datetime values, giving a time delta object -  a time in hours which
 represented a rough indication of my sleep time.
-```
+```python
 begin = new.date[0]  # first date in the data as reference point
 i=0
 sleep = DataFrame([])
@@ -72,7 +72,7 @@ for which this value was calculated:
 
 
 
-```
+```python
 a4_dims=(16,10)
 sns.set(style="ticks")
 fig, ax = plt.subplots(figsize=a4_dims)
@@ -115,7 +115,7 @@ with my own data.
 Since the data doesn't take into account daylight saving I needed to make
 the dateime value 'aware' of the timezone in which it was recorded,
 thus all data should be consistent throughout the year:
-```
+```python
 tz = timezone("Europe/London")
 UTC = pytz.utc
 
@@ -126,7 +126,7 @@ df2['end'] = df2['end'].apply(lambda x : x.tz_localize(UTC).tz_convert(tz))
 Also, I needed to calculate the time difference between the activity
 'start' and 'end' time for all values and convert this value
 to a float in order to plot:
-```
+```python
 df2['act'] = df2.end - df2.start
 
 df2['hours'] = df2['act'] / np.timedelta64(3600, 's')
@@ -185,7 +185,7 @@ Here I wanted to find out how different days of week affected the amount
 of sleep I had.
 
 Using the associated date, I assigned a number to each day of the week:
-```
+```python
 sleep['day'] = sleep['date'].dt.dayofweek
 ```
 
