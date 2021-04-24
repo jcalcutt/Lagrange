@@ -17,7 +17,6 @@ Given a year, convert it to its Roman Numeral representation. I won’t go into 
 _Here’s my solution:_
 
 ```python
-# numeral symbol mapping
 symbols = {
     1:"I",
     5:"V",
@@ -29,8 +28,7 @@ symbols = {
 }
 
 def numerals(n: int) -> str:
-    """
-    Given an integer year from 1-3000, convert it to roman numerals
+    """Given an integer year from 1-3000, convert it to roman numerals
     Parameters
     ----------
     n : int
@@ -44,37 +42,30 @@ def numerals(n: int) -> str:
     ValueError
         Year passed is too large
     """
-
     result = []
     sn = str(n)
     x = len(str(n))
     if n > 3000:
         raise ValueError("Unable to handle year this large")
-
     # milleniums
     if x == 4:
         # standalone logic to create the millenium numerals
         result.extend(symbols[1000]*int(sn[-4]))
-    
     # check how many digits we have, and if we do, pass that digit to the numeral conversion logic
     # centuries
     if x >=3:
         result.extend(numeral_logic(int(sn[-3]), symbols[100], symbols[500], symbols[1000]))
-
     # decades
     if x >=2:
         result.extend(numeral_logic(int(sn[-2]), symbols[10], symbols[50], symbols[100]))
-
     # years
     if x >=1:
         result.extend(numeral_logic(int(sn[-1]), symbols[1], symbols[5], symbols[10]))
-    
     # convert to string and return
     return "".join(result)
 
 def numeral_logic(value: int, small: str, mid: str, large: str) -> str:
-    """ 
-    For a given number, and set of small, mid, and large numeral mappings, implement the roman numeral conversion logic.
+    """ For a given number, and set of small, mid, and large numeral mappings, implement the roman numeral conversion logic.
     Valid for centuries, decades and individual years.
     Parameters
     ----------
@@ -91,24 +82,18 @@ def numeral_logic(value: int, small: str, mid: str, large: str) -> str:
     str
         roman numeral representation for the requested value, e.g. "IV" for 4
     """
-
     if value <= 3:
         result = small*value
-    
     elif value == 4:
         result = small + mid
-    
     elif value == 5: 
         result = mid
-    
     elif value > 5 and value <= 8:
         n = value-5
         result = mid + n*small
-    
     else:
         # value = 9
         result = small + large
-    
     return result
 ```
 [https://gist.github.com/jcalcutt/1c147f818f7118d3d4f1d2666f517058](https://gist.github.com/jcalcutt/1c147f818f7118d3d4f1d2666f517058)
@@ -133,8 +118,7 @@ _Again, here’s my solution:_
 
 ```python
 def maximal_palindrome(s: str) -> str:
-    """
-    Given a string of letters, find the maximum length possible palindrome
+    """Given a string of letters, find the maximum length possible palindrome
     Parameters
     ----------
     s : str
@@ -144,7 +128,6 @@ def maximal_palindrome(s: str) -> str:
     str
         maximum palindrome, e.g. "acaca"
     """
-
     result = []
     s = s.strip()
     unique_letters = ''.join(set(s))
@@ -200,7 +183,6 @@ _Solution:_
 ```python
 from typing import List
 
-
 def word_count(board: List[List[str]], word: str) -> int:
     """For a given 2-dimensional 'board' of characters, represented by a list of lists, calculate
     the number of times a given word appears in the board, either horizontally, vertically, or diagonally 
@@ -233,7 +215,6 @@ def word_count(board: List[List[str]], word: str) -> int:
             vert_arr = []
             for arr in board:
                 vert_arr.append(arr[i])
-
             total_count += count_str_in_arr(vert_arr, word)
 
     # logic to create diagonal arrays - iterate over all top rows and columns on left of board
@@ -257,7 +238,6 @@ def word_count(board: List[List[str]], word: str) -> int:
             
     return total_count
 
-
 def count_str_in_arr(arr: List[str], word: str) -> int:
     """Count the number of occurences of a word in a list of letters. Word occurences can be overlapping
     Parameters
@@ -271,7 +251,6 @@ def count_str_in_arr(arr: List[str], word: str) -> int:
     int
         Count of times word appears in array, e.g. 2
     """
-    
     arr_str = ''.join(arr)
     occurences = 0
     for i in range(len(arr_str)):
